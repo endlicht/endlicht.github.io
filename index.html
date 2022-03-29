@@ -13,7 +13,9 @@
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="assets/styles/bootstrap.min.css" rel="stylesheet"/>
+    <script src="assets/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/styles/app.css"/>
@@ -24,31 +26,27 @@
 <body>
 <nav id="navbarExtern" class="navbar navbar-expand-md sticky-top flex-md-column navbar-light navbar-extern">
 
+    <a id="navLogoLink" class="navbar-brand align-self-center m-0 pb-3 position-md-absolute pb-md-0 navlink-logo navlogo-show" href="#">
+        <img src="assets/img/logo.png" id="navbarlogo" alt="Cafe Endlicht">
+    </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
             aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse justify-content-md-center w-100" id="navbarToggler">
+    <div id="navbarToggler" class="collapse navbar-collapse justify-content-md-center w-100">
         <ul id="navlistExtern" class="navbar-nav mt-2 mt-lg-0 text-center heading navlist-extern transitionlist">
-            <li class="nav-item">
-                <a class="nav-link navbar-list-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item active navitem-margin navitem-first">
+                <a class="nav-link navbar-list-link" href="#">Home <span class="visually-hidden">(current)</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active navitem-margin navitem-center-left">
                 <a class="nav-link navbar-list-link text-nowrap" href="#theCafe">Das Caf&eacute</a>
             </li>
-            <li class="nav-item">
-                <a id="navLogoLink"
-                   class="navbar-brand align-self-center m-0 pb-3 position-md-absolute pb-md-0 navlink-logo navlogo-show"
-                   href="#">
-                    <img src="assets/img/logo.png" id="navbarlogo" alt="Cafe Endlicht">
-                </a>
-            </li>
-            <li class="nav-item">
+            <li class="nav-item active navitem-margin navitem-center-right">
                 <a class="nav-link navbar-list-link" href="#openings">&Oumlffnungszeiten</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active navitem-margin navitem-last">
                 <a class="nav-link navbar-list-link" href="#pricing">Preise</a>
             </li>
         </ul>
@@ -62,7 +60,7 @@
     </div>
     <!-- Das Café -->
     <div class="page-element" id="theCafe">
-        <h2 class="welcome-header">Das Café</h2>
+        <h2 class="welcome-header scroll-spacing">Das Café</h2>
         <div class="row info-row">
             <div class="col-md-6">
                 Ein R&uumlckzugsort für Studierende. Ein Raum zum Austauschen. Ein Caf&eacute zum Verweilen. Von Studis
@@ -98,15 +96,15 @@
     </div>
 
     <!-- Video -->
-    <div class="page-element ">
+    <div class="page-element">
         <video class="video-class" controls>
             <source src="assets/video/endlicht_film.mp4" type="video/mp4">
         </video>
     </div>
 
     <!-- Slider -->
-    <div class="page-element">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="page-element scroll-spacing">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="assets/img/Slider/Slider1.jpg" class="d-block w-100"
@@ -149,18 +147,20 @@
                          class="d-block w-100" alt="placeholder 10">
                 </div>
             </div>
-            <a class="carousel-control-prev" data-bs-target="#carouselExampleInterval" role="button" data-bs-slide="prev">
-                <i class="fas fa-chevron-left" style="font-size: larger"></i>
-            </a>
-            <a class="carousel-control-next" data-bs-target="#carouselExampleInterval" role="button" data-bs-slide="next">
-                <i class="fas fa-chevron-right" style="font-size: larger"></i>
-            </a>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 
     <!-- opening hours -->
     <div class="page-element" id="openings">
-        <h3 class="welcome-header">&Oumlffnungszeiten</h3>
+        <h3 class="welcome-header scroll-spacing">&Oumlffnungszeiten</h3>
         <p class="openings">
             Montag bis Donnerstag<br>
             9:00-16:00 Uhr <br>
@@ -178,7 +178,7 @@
 
     <!-- Preise  -->
     <div class="page-element pricing-element" id="pricing">
-        <h3 class="welcome-header">Preise</h3>
+        <h3 class="welcome-header scroll-spacing">Preise</h3>
         <table class="table-borderless table-sm pricing-table">
             <tbody>
             <tr>
@@ -249,7 +249,7 @@
     </div>
 
     <!-- Google Maps Einbindung -->
-    <div class="page-element">
+    <div class="page-element scroll-spacing">
         <iframe class="map-endlicht" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1129.6913860689829!2d9.170668764745102!3d47.66744277318648!2m3!
         1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479af6fc5d08f4dd%3A0xa9485d2b733e2071!2sEndlicht!5e0!3m2!1sde!2sde!4v1556967751190!5m2!1sde!2sde"
                 frameborder="0" style="border:0" allowfullscreen="true"></iframe>

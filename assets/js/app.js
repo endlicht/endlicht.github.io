@@ -1,9 +1,3 @@
-// Carousel
-$('.carousel').carousel({
-  interval: 4000,
-  pause: "hover"
-});
-
 // On Scroll Navbar Logo ausblenden
 // mit transition padding entfernen
 $(window).scroll(function () {

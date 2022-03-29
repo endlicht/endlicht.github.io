@@ -44,13 +44,32 @@
   .page-element {
     font-size: 1.1rem !important;
   }
+  .navitem-margin {
+    margin: 0 2em 0 2em;
+  }
+
+  .navitem-first {
+    margin-left: 3em;
+  }
+
+  .navitem-center-left {
+    margin-right: 6em;
+  }
+
+  .navitem-center-right {
+    margin-left: 7em;
+  }
+
+  .navitem-last {
+    margin-right: 3em;
+  }
 
   .navlink-logo {
     position: absolute;
   }
 
   .navbar-nav .nav-item:nth-child(2) {
-    margin-right: 12em;
+    margin-right: 8em;
     transition: margin-right 0.3s ease-in-out;
   }
 
@@ -74,16 +93,7 @@
   }
 }
 
-@media (min-width: 768px) {
-  .sidenav-intern a {
-    padding: 8% 15% 8% 15% !important;
-    text-align: left;
-  }
 
-  #sidebar-menu {
-    padding: 2% 1% 0 2%;
-  }
-}
 /* Footer */
 .page-footer {
   background: url(../img/Hintergrund.jpg);
@@ -136,12 +146,17 @@
     width: 100%;
   }
 }
+
+
 /* Welcome Page */
 .page-element {
-  margin-bottom: 5%;
     font-family: "Montserrat", serif;
   font-size: 0.8rem;
   color: black;
+}
+
+.scroll-spacing {
+padding-top: 5%;
 }
 
 .welcome-header {
@@ -156,6 +171,12 @@
       -ms-hyphens: auto;
           hyphens: auto;
   text-align: justify;
+}
+
+.video-class {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .openings {
