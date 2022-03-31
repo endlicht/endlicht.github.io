@@ -8,16 +8,16 @@ $(window).scroll(function () {
     $('#navLogoLink').addClass('navlogo-hide');
     $('#navlistExtern').removeClass('mt-2');
     if (window.matchMedia("(min-width: 768px)").matches) {
-      $('#navlistExtern').removeClass('navlist-extern');
-      $('#navlinkMiddle').addClass('listLink');
-      $('#navlinkLast').addClass('listLink');
+      $('#navlistExtern').removeClass('navtransition-up');
+      $('#navlinkMiddleLeft').addClass('listLink');
+      $('#navlinkMiddleRight').addClass('listLink');
     }
   } else if (offsetY === offsetCurrent) {
     $('#navLogoLink').removeClass('navlogo-hide');
     if (window.matchMedia("(min-width: 768px)").matches) {
-      $('#navlistExtern').addClass('navlist-extern');
-      $('#navlinkMiddle').removeClass('listLink');
-      $('#navlinkLast').removeClass('listLink');
+      $('#navlistExtern').addClass('navtransition-up');
+      $('#navlinkMiddleLeft').removeClass('listLink');
+      $('#navlinkMiddleRight').removeClass('listLink');
     }
   }
 });
