@@ -207,7 +207,7 @@ padding-top: 5%;
   }
 }
 .myModal {
-  background: url(../img/Titelbild_clean.jpg);
+  background: black url(../img/Titelbild_clean.jpg);
 }
 .myModalClose {
   margin: 0 0 0 auto !important;
@@ -220,6 +220,7 @@ padding-top: 5%;
 .content-privacy {
   font-family: "Montserrat", serif;
   font-size: 0.8rem;
+  text-align: justify;
 }
 
 .content-font {
